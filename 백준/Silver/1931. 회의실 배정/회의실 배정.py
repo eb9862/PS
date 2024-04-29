@@ -6,8 +6,9 @@ lst = [[] for _ in range(N)]
 for i in range(N):
     lst[i] = list(map(int, input().rstrip().split()))
 
-lst.sort()
-lst.sort(key=lambda x: x[1])
+'''lst.sort()
+lst.sort(key=lambda x: x[1])'''
+lst.sort(key=lambda x : (x[1], x[0]))
 
 cnt = 0
 end = 0
