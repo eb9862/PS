@@ -12,6 +12,7 @@
 ### 🚀 Silver
 | 문제번호 | 링크 |
 | ----- | ----- |
+|1012. 유기농 배추|[링크](./%EB%B0%B1%EC%A4%80/Silver/1012.%E2%80%85%EC%9C%A0%EA%B8%B0%EB%86%8D%E2%80%85%EB%B0%B0%EC%B6%94/%EC%9C%A0%EA%B8%B0%EB%86%8D%E2%80%85%EB%B0%B0%EC%B6%94.py)|
 |1026. 보물|[링크](./%EB%B0%B1%EC%A4%80/Silver/1026.%E2%80%85%EB%B3%B4%EB%AC%BC/README.md)|
 |11399. ATM|[링크](./%EB%B0%B1%EC%A4%80/Silver/11399.%E2%80%85ATM/README.md)|
 |1260. DFS와 BFS|[링크](./%EB%B0%B1%EC%A4%80/Silver/1260.%E2%80%85DFS%EC%99%80%E2%80%85BFS/README.md)|
