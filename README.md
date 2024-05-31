@@ -10,6 +10,7 @@
 |10804. 카드 역배치|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10804.%E2%80%85%EC%B9%B4%EB%93%9C%E2%80%85%EC%97%AD%EB%B0%B0%EC%B9%98/README.md)|
 |10989. 수 정렬하기 3|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10989.%E2%80%85%EC%88%98%E2%80%85%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0%E2%80%853/README.md)|
 |15552. 빠른 A＋B|[링크](./%EB%B0%B1%EC%A4%80/Bronze/15552.%E2%80%85%EB%B9%A0%EB%A5%B8%E2%80%85A%EF%BC%8BB/README.md)|
+|2775. 부녀회장이 될테야|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2775.%E2%80%85%EB%B6%80%EB%85%80%ED%9A%8C%EC%9E%A5%EC%9D%B4%E2%80%85%EB%90%A0%ED%85%8C%EC%95%BC/README.md)|
 ### 🚀 Silver
 | 문제번호 | 링크 |
 | ----- | ----- |
