@@ -11,6 +11,7 @@
 |10989. 수 정렬하기 3|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10989.%E2%80%85%EC%88%98%E2%80%85%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0%E2%80%853/README.md)|
 |15552. 빠른 A＋B|[링크](./%EB%B0%B1%EC%A4%80/Bronze/15552.%E2%80%85%EB%B9%A0%EB%A5%B8%E2%80%85A%EF%BC%8BB/README.md)|
 |2775. 부녀회장이 될테야|[링크](./%EB%B0%B1%EC%A4%80/Bronze/2775.%E2%80%85%EB%B6%80%EB%85%80%ED%9A%8C%EC%9E%A5%EC%9D%B4%E2%80%85%EB%90%A0%ED%85%8C%EC%95%BC/README.md)|
+|30802. 웰컴 키트|[링크](./%EB%B0%B1%EC%A4%80/Bronze/30802.%E2%80%85%EC%9B%B0%EC%BB%B4%E2%80%85%ED%82%A4%ED%8A%B8/README.md)|
 ### 🚀 Silver
 | 문제번호 | 링크 |
 | ----- | ----- |
