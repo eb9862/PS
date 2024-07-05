@@ -7,6 +7,7 @@
 ### 🚀 Bronze
 | 문제번호 | 링크 |
 | ----- | ----- |
+|10718. We love kriii|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10718.%E2%80%85We%E2%80%85love%E2%80%85kriii/README.md)|
 |10804. 카드 역배치|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10804.%E2%80%85%EC%B9%B4%EB%93%9C%E2%80%85%EC%97%AD%EB%B0%B0%EC%B9%98/README.md)|
 |10989. 수 정렬하기 3|[링크](./%EB%B0%B1%EC%A4%80/Bronze/10989.%E2%80%85%EC%88%98%E2%80%85%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0%E2%80%853/%EC%88%98%E2%80%85%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0%E2%80%853.py)|
 |15552. 빠른 A＋B|[링크](./%EB%B0%B1%EC%A4%80/Bronze/15552.%E2%80%85%EB%B9%A0%EB%A5%B8%E2%80%85A%EF%BC%8BB/%EB%B9%A0%EB%A5%B8%E2%80%85A%EF%BC%8BB.py)|
