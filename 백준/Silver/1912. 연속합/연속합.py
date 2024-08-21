@@ -13,5 +13,5 @@ res = []
 for i in range(1, n+1):
     if mn > subtotal[i-1]:
         mn = subtotal[i-1]
-    res.append(max(subtotal[i], subtotal[i] - mn))
+    res.append(subtotal[i] - mn)
 print(max(res))
