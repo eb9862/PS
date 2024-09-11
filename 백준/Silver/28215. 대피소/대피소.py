@@ -27,7 +27,10 @@ for i in list(cases):
         d = d_nearer_shelter(p, shelters)
         if d != 0:
             ds.append(d)
-    mx = max(ds)
+    if ds != []:
+        mx = max(ds)
+    else:
+        mx = 0
     if res > mx:
         res = mx
 print(res)
