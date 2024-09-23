@@ -11,21 +11,16 @@ public class Main {
 
         for (int i = 0; i < t; i++) {
             int l, r, s, step;
-            step = 1;
             StringTokenizer st = new StringTokenizer(bf.readLine());
             l = Integer.parseInt(st.nextToken());
             r = Integer.parseInt(st.nextToken());
             s = Integer.parseInt(st.nextToken());
 
-            while (true) {
-                switch (step % 2) {
-                    case 0 -> s -= step;
-                    case 1 -> s += step;
-                };
-                step++;
-                if (s == l || s == r) {
-                    break;
-                }
+            step = 1;
+            if ((s - l) < (r - s)) {
+                step += (s - l) * 2;
+            } else {
+                step += (r - s) * 2 - 1;
             }
             System.out.println(step);
         }
