@@ -34,8 +34,8 @@ public class Main {
 
     static int checkLeft(String loc, boolean[] canEat, int idx, int k) {
         int start = Math.max(idx - k, 0);
-        int end = Math.max(idx - 1, 0) + 1;
-        for (int i = start; i < end; i++) {
+        int end = Math.max(idx - 1, 0);
+        for (int i = start; i <= end; i++) {
             if (loc.charAt(i) == 'H' && canEat[i] == true) {
                 canEat[i] = false;
                 return 1;
@@ -45,9 +45,9 @@ public class Main {
     }
 
     static int checkRight(String loc, boolean[] canEat, int idx, int k, int n) {
-        int start = Math.min(idx + 1, n - 1);
-        int end = Math.min(idx + k, n - 1) + 1;
-        for (int i = start; i < end; i++) {
+        int start = Math.min(idx + 1, n - 1);  // loc.length()
+        int end = Math.min(idx + k, n - 1);
+        for (int i = start; i <= end; i++) {
             if (canEat[i] == true && loc.charAt(i) == 'H') {
                 canEat[i] = false;
                 return 1;
