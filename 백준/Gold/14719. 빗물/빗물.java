@@ -1,3 +1,40 @@
+// import java.io.BufferedReader;
+// import java.io.IOException;
+// import java.io.InputStreamReader;
+// import java.util.StringTokenizer;
+
+// public class Main {
+
+//     static int n;
+//     static int k;
+
+//     public static void main(String[] args) throws IOException {
+//         BufferedReader br = new BufferedReader(
+//             new InputStreamReader(System.in)
+//         );
+//         StringTokenizer st = new StringTokenizer(br.readLine());
+
+//         n = Integer.parseInt(st.nextToken());
+//         k = Integer.parseInt(st.nextToken());
+
+//         int sumValue = oneToK();
+//         if (k > n || sumValue > n) {
+//             System.out.println(-1);
+//             return;
+//         } else {
+//             if ((n - sumValue) % k == 0) {
+//                 System.out.println(k - 1);
+//             } else {
+//                 System.out.println(k);
+//             }
+//         }
+//     }
+
+//     static int oneToK() {
+//         return (k * (k + 1)) / 2;
+//     }
+// }
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -22,7 +59,7 @@ public class Main {
             heights[i] = Integer.parseInt(st.nextToken());
         }
 
-        if (h == 1 && w == 1) {
+        if ((h == 1 && w == 1) || w == 2) {
             System.out.println(0);
             return;
         }
@@ -44,7 +81,7 @@ public class Main {
         if (currentIdx == 0) {
             return 0;
         } else {
-            for (int i = 1; i < currentIdx; i++) {
+            for (int i = 0; i < currentIdx; i++) {
                 if (maxValue < heights[i]) {
                     maxValue = heights[i];
                 }
@@ -58,7 +95,7 @@ public class Main {
         if (currentIdx == heights.length - 1) {
             return 0;
         } else {
-            for (int i = currentIdx + 1; i < heights.length - 1; i++) {
+            for (int i = currentIdx + 1; i < heights.length; i++) {
                 if (maxValue < heights[i]) {
                     maxValue = heights[i];
                 }
