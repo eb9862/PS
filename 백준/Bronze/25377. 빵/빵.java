@@ -17,7 +17,7 @@ public class Main {
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
 
-            if (a < b) {
+            if (a <= b) {
                 if (b < result) {
                     result = b;
                 }
