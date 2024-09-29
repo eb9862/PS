@@ -5,36 +5,53 @@ import java.util.StringTokenizer;
 
 public class Main {
 
+    static int n, result;
+    static int[] cards;
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(
-            new InputStreamReader(System.in)
+                new InputStreamReader(System.in)
         );
-        int n = Integer.parseInt(br.readLine());
-        int[] cards = new int[n];
+        n = Integer.parseInt(br.readLine());
+        cards = new int[n];
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         for (int i = 0; i < n; i++) {
             cards[i] = Integer.parseInt(st.nextToken());
         }
 
-        int result = 0;
+        result = 0;
         for (int i = 0; i < n - 1; i++) {
-            int sub = cards[i + 1] - cards[i];
-            int nextValue = cards[i] + sub;
-            int seq = 1;
-            //System.out.println("sub = " + sub);
-            for (int j = i; j < n - 1; j++) {
-                if (cards[j + 1] == nextValue) {
-                    seq++;
+            for (int j = i + 1; j < n; j++) {
+                int sub = (cards[j] - cards[i]) / (j - i); // j - i 괄호 안해줬었음..
+                double doubleSub = (double) (cards[j] - cards[i]) / (j - i);
+                if (doubleSub != sub) {
+                    continue;
                 }
-                nextValue += sub;
+                checkFromIdx(i, sub);
             }
-            //System.out.println("seq = " + seq);
-            if (result < seq) {
-                result = seq;
-            }
-            //System.out.println("----------------");
         }
         System.out.println(n - result);
+    }
+
+    static void checkFromIdx(int idx, int sub) {
+        int seq = 1;
+        int prevValue = cards[idx] - sub;
+        for (int j = idx; j > 0; j--) {
+            if (cards[j - 1] == prevValue) {
+                seq++;
+            }
+            prevValue -= sub;
+        }
+        int nextValue = cards[idx] + sub;
+        for (int j = idx; j < n - 1; j++) {
+            if (cards[j + 1] == nextValue) {
+                seq++;
+            }
+            nextValue += sub;
+        }
+        if (result < seq) {
+            result = seq;
+        }
     }
 }
