@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -9,6 +11,9 @@ public class Main {
         BufferedReader br = new BufferedReader(
             new InputStreamReader(System.in)
         );
+        BufferedWriter bw = new BufferedWriter(
+            new OutputStreamWriter(System.out)
+        );
 
         int n = Integer.parseInt(br.readLine());
         for (int i = 0; i < n; i++) {
@@ -16,8 +21,11 @@ public class Main {
             int grade1 = Integer.parseInt(st.nextToken());
             int grade2 = Integer.parseInt(st.nextToken());
             int totalPrize = getFirstPrize(grade1) + getSecondPrize(grade2);
-            System.out.println(totalPrize);
+            bw.write(Integer.toString(totalPrize));
+            bw.newLine();
         }
+        bw.flush();
+        bw.close();
     }
 
     static int getFirstGrade(int grade1) {
