@@ -6,7 +6,6 @@ import java.util.StringTokenizer;
 public class Main {
 
     static int[] dolls;
-    static int n, k;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(
@@ -14,8 +13,8 @@ public class Main {
         );
         StringTokenizer st = new StringTokenizer(br.readLine());
 
-        n = Integer.parseInt(st.nextToken());
-        k = Integer.parseInt(st.nextToken());
+        int n = Integer.parseInt(st.nextToken());
+        int k = Integer.parseInt(st.nextToken());
 
         dolls = new int[n];
         st = new StringTokenizer(br.readLine());
