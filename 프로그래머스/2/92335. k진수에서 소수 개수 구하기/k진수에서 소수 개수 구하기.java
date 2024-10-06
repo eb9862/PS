@@ -23,7 +23,7 @@ class Solution {
             }
             if (l != r) {
                 long checkNum = Long.parseLong(knary.substring(l, r));
-                if (isPrimary(checkNum)) {
+                if (isPrime(checkNum)) {
                     answer++;
                 }
             }
@@ -50,7 +50,7 @@ class Solution {
         sb.append(num % k);
     }
     
-    static boolean isPrimary(long num) {
+    static boolean isPrime(long num) {
         if (num == 0 || num == 1) {
             return false;
         }
