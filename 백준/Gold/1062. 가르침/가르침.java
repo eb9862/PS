@@ -47,7 +47,7 @@ public class Main {
     }
 
     /*static boolean canRead(String s) {
-        char[] chars = s.toCharArray();
+        char[] chars = s.toCharArray();  // 이 부분에서 배열을 자주 생성하여 메모리 초과 발생한 것으로 추측..!
         for (char c : chars) {
             if (!alpha[c - 'a']) {
                 return false;
@@ -62,7 +62,7 @@ public class Main {
             for (String s : words) {
                 boolean flag = true;
                 for (int i = 0; i < s.length(); i++) {
-                    if (!alpha[s.charAt(i) - 'a']) {
+                    if (!alpha[s.charAt(i) - 'a']) { // String.charAt()을 사용하여 canRead 메소드 대체
                         flag = false;
                     }
                 }
