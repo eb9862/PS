@@ -20,7 +20,7 @@ public class Main {
 
         result = 9;
         for (int l = 2; l <= 10; l++) {
-            long num = 0;
+            long num = 0;              // 마지막 감소하는 수인 '9876543210'은 int 범위를 초과
             bt(num, 0, l);
         }
         System.out.println(-1);
