@@ -23,36 +23,26 @@ public class Main {
             numbers.add(number);
         }
 
-        List<Integer> prefixSums = new ArrayList<>();
-        prefixSums.add(0);
-        int sum = 0;
-        for (int i = 0; i < n; i++) {
-            int number = numbers.get(i);
-            sum += number;
-            prefixSums.add(sum);
+        int sum = numbers.get(0);
+        int startIndex = 0;
+        int endIndex = 0;
+        int result = n + 1;
+        while (endIndex < n) {
+            if (sum < s) {
+                endIndex++;
+                if (endIndex < n) {
+                    sum += numbers.get(endIndex);
+                }
+                continue;
+            }
+            int length = endIndex - startIndex + 1;
+            if (result > length) {
+                result = length;
+            }
+            sum -= numbers.get(startIndex);
+            startIndex++;
         }
 
-        int result = n + 1;
-        for (int length = n; length > 0; length--) {
-            boolean pass = false;
-            for (
-                int startIndex = 0;
-                startIndex + length < n + 1;
-                startIndex++
-            ) {
-                int subtotal =
-                    prefixSums.get(startIndex + length) -
-                    prefixSums.get(startIndex);
-                if (subtotal >= s) {
-                    result = length;
-                    pass = true;
-                    break;
-                }
-            }
-            if (!pass) {
-                break;
-            }
-        }
         if (result == n + 1) {
             System.out.println(0);
             return;
