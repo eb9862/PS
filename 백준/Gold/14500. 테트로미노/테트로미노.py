@@ -17,8 +17,6 @@ def move_like_tetromino(y: int, x: int, move_count: int, sum_value: int):
         result = max(sum_value, result)
         return
     
-    visited[y][x] = True
-    
     dx = [0, 0, 1, -1]
     dy = [1, -1, 0, 0]
     
@@ -39,14 +37,10 @@ def move_like_T(y: int, x: int):
             bar += board[y][x+i]
         
         if is_valid_coor(y-1, x+1):
-            sum_value = bar + board[y-1][x+1]
-            if result < sum_value:
-                result = sum_value
+            result = max(result, bar + board[y-1][x+1])
 
         if is_valid_coor(y+1, x+1):
-            sum_value = bar + board[y+1][x+1]
-            if result < sum_value:
-                result = sum_value
+            result = max(result, bar + board[y+1][x+1])
     
     if y+2 < n: # ㅏ, ㅓ
         bar = 0
@@ -54,14 +48,10 @@ def move_like_T(y: int, x: int):
             bar += board[y+i][x]
         
         if is_valid_coor(y+1, x+1):
-            sum_value = bar + board[y+1][x+1]
-            if result < sum_value:
-                result = sum_value
+            result = max(result, bar + board[y+1][x+1])
 
         if is_valid_coor(y+1, x-1):
-            sum_value = bar + board[y+1][x-1]
-            if result < sum_value:
-                result = sum_value
+            result = max(result, bar + board[y+1][x-1])
 
 n, m = map(int, input().rstrip().split())
 
