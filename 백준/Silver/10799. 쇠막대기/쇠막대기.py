@@ -16,4 +16,5 @@ while i < l:
         stack.pop()
         answer += 1
     i += 1
+
 print(answer)
