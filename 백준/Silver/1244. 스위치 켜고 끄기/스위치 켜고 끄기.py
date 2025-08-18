@@ -1,51 +1,34 @@
-from sys import stdin, stdout
-input = stdin.readline
-print = stdout.write
+n = int(input())
+status = list(map(int, input().split()))
+k = int(input())
 
-N = int(input().rstrip())
-lst = list(map(int, input().rstrip().split()))
-M = int(input().rstrip())
+def toggle(idx: int):
+    status[idx] = 1 - status[idx]
 
-for _ in range(M):
-    s, n = map(int, input().rstrip().split())
-    if s == 1:
-        for i in range(N):
-            if (i + 1) % n == 0:
-                if lst[i] == 1:
-                    lst[i] = 0
-                else:
-                    lst[i] = 1
+for i in range(k):
+    gender, num = map(int, input().split())
+    if gender == 1: # 남자
+        for j in range(num - 1, n, num):
+            toggle(j)
     else:
-        n -= 1
-        for i in range(N):
-            if n - i < 0 or n - i >= N or n + i < 0 or n + i >= N:
+        toggle(num - 1)
+        
+        step = 1
+        num -= 1
+        while True:
+            l = num - step
+            r = num + step
+
+            if l < 0 or r >= n:
                 break
+            
+            if status[l] == status[r]:
+                toggle(l)
+                toggle(r)
             else:
-                if lst[n-i] != lst[n+i]:
-                    break
-        if i != 0:
-            i -= 1
-        for j in range(n-i, n+i+1):
-            if lst[j] == 1:
-                lst[j] = 0
-            else:
-                lst[j] = 1
+                break
 
-sh = N // 20
-re = N % 20
+            step += 1
 
-for i in range(sh + 1):
-    res = ""
-    if i != sh:
-        for j in range(20):
-            res += str(lst[i * 20 + j])
-            if j != 19:
-                res += " "
-            else:
-                print(res + '\n')
-    else:
-        for j in range(re):
-            res += str(lst[i * 20 + j])
-            if j != re - 1:
-                res += " "
-        print(res)
+for i in range(0, n, 20):
+    print(*status[i:i+20])
